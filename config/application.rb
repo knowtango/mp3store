@@ -40,3 +40,5 @@ module Mp3store
     config.filter_parameters += [:password]
   end
 end
+
+#This comment is being added as a test for GitHub commit
