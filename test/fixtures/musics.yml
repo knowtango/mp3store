@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  length_in_sec: 1
+  mp3_file_name: MyString
+  mp3_content_type: MyString
+  mp3_file_size: 1
+  mp3_updated_at: 2011-04-03 23:56:46
+  album: 
+
+two:
+  name: MyString
+  length_in_sec: 1
+  mp3_file_name: MyString
+  mp3_content_type: MyString
+  mp3_file_size: 1
+  mp3_updated_at: 2011-04-03 23:56:46
+  album: 

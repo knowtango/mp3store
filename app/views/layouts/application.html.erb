@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mp3store</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id='wrapper'> 
+	    <div id='store'> 
+	      <div id='top_navigation'> 
+	      <%= render_navigation %> 
+	      </div> 
+	      <div id='content' class='content'> 
+	      <%= yield %> 
+	      </div> 
+	    </div> 
+	  </div>
+</body>
+</html>

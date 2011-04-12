@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @music.name %>
+</p>
+
+<p>
+  <b>Length in sec:</b>
+  <%= @music.length_in_sec %>
+</p>
+
+<p>
+  <b>Mp3 file name:</b>
+  <%= @music.mp3_file_name %>
+</p>
+
+<p>
+  <b>Mp3 content type:</b>
+  <%= @music.mp3_content_type %>
+</p>
+
+<p>
+  <b>Mp3 file size:</b>
+  <%= @music.mp3_file_size %>
+</p>
+
+<p>
+  <b>Mp3 updated at:</b>
+  <%= @music.mp3_updated_at %>
+</p>
+
+<p>
+  <b>Album:</b>
+  <%= @music.album %>
+</p>
+
+
+<%= link_to 'Edit', edit_music_path(@music) %> |
+<%= link_to 'Back', musics_path %>

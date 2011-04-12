@@ -1,0 +1,32 @@
+<h1>Listing artists</h1>
+
+<table>
+  <tr>
+    <th>Full name</th>
+    <th>Biography</th>
+    <th>Date of birth</th>
+    <th>Official website</th>
+    <th>Music style</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @artists.each do |artist| %>
+  <tr>
+    <td><%= artist.first_name %> <%= artist.last_name %></td>
+	<td><%= artist.biography[0..100] %><%="..." if artist.biography.length > 100 %></td>
+	<%-# how does it know to pull the length? #%>
+    <td><%= artist.date_of_birth %></td>
+    <td><%= artist.official_website %></td>
+    <td><%= artist.music_style %></td>
+    <td><%= link_to 'Show', artist %></td>
+    <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+    <td><%= link_to 'Destroy', artist, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Artist', new_artist_path %>
