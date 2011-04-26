@@ -32,7 +32,7 @@
 
 <p>
   <b>Album:</b>
-  <%= @music.album %>
+  <%= @music.album.try(:name) %>
 </p>
 
 

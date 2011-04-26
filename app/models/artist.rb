@@ -1,7 +1,10 @@
 class Artist < ActiveRecord::Base
-  has_many :albums_artists
-  has_many :albums, :through  => :albums_artists
+  has_and_belongs_to_many :albums
   
   validates :first_name,
     :presence => true
+    
+  def name
+    first_name + " " + last_name
+  end 
 end

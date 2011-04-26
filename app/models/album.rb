@@ -1,4 +1,3 @@
 class Album < ActiveRecord::Base
-  has_many :albums_artists
-  has_many :artists, :through  => :albums_artists
+  has_and_belongs_to_many :artists
 end

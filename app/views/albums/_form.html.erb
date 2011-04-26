@@ -1,30 +1,17 @@
-<%= form_for(@album) do |f| %>
+<%= simple_form_for @album do |f| %>
   <% if @album.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+   <div id="error_explanation">
+     <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being    saved:</h2>
 
-      <ul>
-      <% @album.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :release_date %><br />
-    <%= f.date_select :release_date %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-	<div class="field"> 
-	    <%= f.label :artist_id %><br /> 
-	    <%= f.select(:artist_id, Artist.all.map {|a| [a.first_name,  a.id]}, 	
-		 	 	 	 	:include_blank => 'Please select an artist') %> 
-	  </div>
+     <ul>
+     <% @album.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+  <%= f.input :name %>
+  <%= f.input :release_date, :as => :date, :start_year => Date.today.year - 20 %>
+  <%= f.association :artists, :as => :check_boxes %>
+  <%= f.submit 'Save' %>
 <% end %>

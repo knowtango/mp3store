@@ -22,7 +22,7 @@
     <td><%= music.mp3_content_type %></td>
     <td><%= music.mp3_file_size %></td>
     <td><%= music.mp3_updated_at %></td>
-    <td><%= music.album %></td>
+    <td><%= music.album.try(:name) %></td>
     <td><%= link_to 'Show', music %></td>
     <td><%= link_to 'Edit', edit_music_path(music) %></td>
     <td><%= link_to 'Destroy', music, :confirm => 'Are you sure?', :method => :delete %></td>
