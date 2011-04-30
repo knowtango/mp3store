@@ -5,6 +5,7 @@ gem 'annotate'
 gem "paperclip", "~> 2.3"
 gem "simple-navigation"
 gem "simple_form"
+gem "dynamic_form"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
